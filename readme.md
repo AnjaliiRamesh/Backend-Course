@@ -32,3 +32,6 @@ can be me ny types of API's
 
  we never save image in database
  we give our image to cloud storage provider(csp) and this csp gives us url of the image and then the image url is stored in database
+
+ # multer
+ 
