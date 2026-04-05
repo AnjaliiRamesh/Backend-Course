@@ -21,3 +21,14 @@ can be me ny types of API's
  W8l7E1ezmiNzzY4h
 
  mongodb+srv://anjaliramesh14012005_db_user:W8l7E1ezmiNzzY4h@cluster0.tguba7j.mongodb.net/?appName=Cluster0
+
+ find()
+ returns data in the form of array of object 
+ guarantees return on object atleast [{},{}] or gives empty array[]
+ findOne()
+ returns one element
+ if data found it will return object {} and if not returns null
+
+
+ we never save image in database
+ we give our image to cloud storage provider(csp) and this csp gives us url of the image and then the image url is stored in database
