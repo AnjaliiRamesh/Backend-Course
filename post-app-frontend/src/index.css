@@ -1,4 +1,4 @@
-*{
+/* *{
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
@@ -82,4 +82,105 @@ html{
   height: auto;
   border-radius: 4px;
   margin-top: 10px;
+}
+.post-card button {
+  margin-top: 10px;
+  padding: 8px 16px;
+   background-color: #ff4d4f; red 
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect 
+.post-card button:hover {
+  background-color: #d9363e;
+  transform: scale(1.05);
+}
+
+/* Click effect 
+.post-card button:active {
+  transform: scale(0.95);
+}
+
+/* Optional: align button nicely 
+.post-card {
+  display: flex;
+  flex-direction: column;
+}
+.post-card button {
+  align-self: flex-end;
+}
+.post-card button::before {
+  content: "🗑 ";
+}
+ */
+
+
+ body {
+  background-color: #fafafa;
+}
+
+/* Feed layout */
+.feed-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Post card */
+.post-card {
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Image */
+.post-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Caption */
+.post-card p {
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+/* Action bar (like Instagram buttons area) */
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+/* Delete button (styled like subtle icon button) */
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ed4956;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.delete-btn:hover {
+  color: #c82333;
+}
+
+/* Optional: username header */
+.post-header {
+  padding: 10px 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #efefef;
 }

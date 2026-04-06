@@ -1,28 +1,79 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const Feed = () => {
-    const [posts, setPosts] = useState([
-        {
-            _id: 1,
-            image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-            caption: 'This is a sample post one'
-        },
-    ]);
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        fetchPosts();
+    }, []);
+
+    const fetchPosts = () => {
+        axios.get('http://localhost:3000/posts')
+            .then((response) => {
+                setPosts(response.data.posts);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
+
+    // ✅ DELETE FUNCTION
+    const handleDelete = async (id) => {
+        try {
+            // await axios.delete(`http://localhost:3000/delete-post/${id}`);
+            await axios.delete(`http://localhost:3000/posts/${id}`);
+
+
+            // remove deleted post from UI
+            // setPosts(posts.filter(post => post._id !== id));
+            setPosts(prevPosts => prevPosts.filter(post => post._id !== id));
+
+
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     return (
-        <section className='feed-section'>
-            {posts.length > 0 ? (
-                posts.map((post) => (
-                    <div key={post._id} className='post-card'>
-                        <img src={post.image} alt={post.caption} />
-                        <p>{post.caption}</p>
+       
+    <section className='feed-section'>
+        {posts.length > 0 ? (
+            posts.map((post) => (
+                <div key={post._id} className='post-card'>
+
+                    {/* Header */}
+                    <div className="post-header">
+                        user_name
                     </div>
-                ))
-            ) : (
-                <p>No posts available</p>
-            )}
-        </section>
-    );
+
+                    {/* Image */}
+                    <img src={post.image} alt={post.caption} />
+
+                    {/* Actions */}
+                    <div className="post-actions">
+                        <span>❤️ 💬 📤</span>
+
+                        <button 
+                            className="delete-btn"
+                            onClick={() => handleDelete(post._id)}
+                        >
+                            Delete
+                        </button>
+                    </div>
+
+                    {/* Caption */}
+                    <p>{post.caption}</p>
+
+                </div>
+            ))
+        ) : (
+            <p>No posts available</p>
+        )}
+    </section>
+);
+
+    
 };
 
 export default Feed;

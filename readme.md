@@ -34,4 +34,10 @@ can be me ny types of API's
  we give our image to cloud storage provider(csp) and this csp gives us url of the image and then the image url is stored in database
 
  # multer
+
+ #
+ preventdefault unwanted loading prevent karta h
+ 
+ # post-app
+ jaise hi post-air caption form me dalke submit karoge image aur caption api ke through server pe jayenge aur image upload karenge imagekit pe return me url dega imagekit caption or url dono database me save honge phir hamare pass response aayega aur jaise hi response aayega ham use navigate kar denge feed page pe
  
