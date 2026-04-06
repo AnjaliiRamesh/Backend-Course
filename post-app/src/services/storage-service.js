@@ -1,7 +1,7 @@
 const ImageKit = require("@imagekit/nodejs")
 
 const imagekit = new ImageKit({
-    privateKey : "private_KOSOkR/M04NBbE/F9wPzab4fAr0="
+    privateKey : process.env.Imgae_Private_Key
 })
 
 async function uploadFile(buffer) {
@@ -9,6 +9,7 @@ async function uploadFile(buffer) {
         file: buffer.toString("base64"),
         fileName: "image.png"
     })
+    return result;
     
 }
 module.exports = uploadFile;
