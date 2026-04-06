@@ -43,22 +43,22 @@ const Feed = () => {
                 <div key={post._id} className='post-card'>
 
                     {/* Header */}
-                    <div className="post-header">
+                    {/* <div className="post-header">
                         user_name
-                    </div>
+                    </div> */}
 
                     {/* Image */}
                     <img src={post.image} alt={post.caption} />
 
                     {/* Actions */}
                     <div className="post-actions">
-                        <span>❤️ 💬 📤</span>
+                        <span>❤️ 💬 </span>
 
                         <button 
                             className="delete-btn"
                             onClick={() => handleDelete(post._id)}
                         >
-                            Delete
+                            🗑
                         </button>
                     </div>
 
