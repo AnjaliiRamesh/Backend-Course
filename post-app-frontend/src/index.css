@@ -1,4 +1,4 @@
-/* *{
+*{
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
@@ -55,7 +55,7 @@ html{
 .create-post-section form button:hover{
   background-color: #3ee470;
 }
-
+/*
 .feed-section{
   display: flex;
   flex-direction: column;
@@ -66,6 +66,7 @@ html{
   width: 100%;
   background-color: #f0f2f5;
 }
+
 .post-card{
   background-color: white;
   padding: 20px;
