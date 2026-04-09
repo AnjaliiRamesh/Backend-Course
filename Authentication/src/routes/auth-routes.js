@@ -6,11 +6,12 @@ const router = express.Router();
 /*Post api/auth/register*/ 
 router.post('/register', authController.registerUser);
 
-router.get('/test', (req, res) => {
-    console.log("cookies: ",req.cookies);
-    res.json({message: "Test route accessed successfully",
-        cookies: req.cookies
-    });
-});
+// router.get('/test', (req, res) => {
+//     console.log("cookies: ",req.cookies);
+//     res.json({message: "Test route accessed successfully",
+//         cookies: req.cookies
+//     });
+// });
+
 
 module.exports = router;
