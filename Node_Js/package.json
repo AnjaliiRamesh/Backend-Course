@@ -1,0 +1,12 @@
+{
+  "name": "node_js",
+  "version": "1.0.0",
+  "description": "learning backend starting from node js",
+  "license": "ISC",
+  "author": "Anjali",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+   "dev": "node index.js"
+  }
+}
