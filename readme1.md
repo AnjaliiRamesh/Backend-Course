@@ -46,3 +46,50 @@ User requests /about → send About page
 User requests /contact → send Contact page
 
 The router checks the URL and directs the request to the correct handler.
+
+
+## Express js
+
+expressJs is framework of nodejs, it gives shrtcuts and a cleaner way to organise your code
+
+Node.js provides the runtime environment, while Express provides useful tools and features so you don't have to write everything from scratch.
+
+Express.js is a framework built on top of Node.js that helps developers create servers, handle routes, process requests, and build APIs more easily.
+
+## HTTP methods 
+HTTP methods tell the server what action the client wants to perform on a resource.
+
+1. GET
+Used to retrieve (fetch) data from the server.
+Example
+GET /users
+Real-world Example
+View products
+View user profile
+View events
+
+2. POST
+Used to create new data on the server.
+Example
+POST /users
+Real-world Example
+Register a user
+Create a post
+Book an event
+
+3. PUT
+Used to completely update/replace existing data.
+Example
+PUT /users/1
+The entire resource is replaced with the new version.
+
+4. PATCH
+Used to partially update data.
+Example
+PATCH /users/1
+Only the specified field is updated.
+
+5. DELETE
+Used to remove data.
+Example
+DELETE /users/1

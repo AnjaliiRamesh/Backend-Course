@@ -1,3 +1,5 @@
+
+/*
 import http from "http"
 
 const server = http.createServer((req,res)=>{
@@ -19,3 +21,18 @@ const server = http.createServer((req,res)=>{
 server.listen(8000,()=>{
     console.log("server is started");  
 });
+
+*/
+
+import express from "express"
+
+const app = express()
+const port=8000
+
+app.get("/",(req,res)=>{
+    res.json({name:"anjali",age:22})
+    res.send("hello")
+})
+app.listen(port,()=>{
+    console.log(`Server is started at ${port}`); 
+})
